@@ -26,9 +26,4 @@ public class SignUpFormController {
     void btnOnActionBacktoLogin(ActionEvent event) {
 
     }
-    @FXML
-    void btnOnActionRegister(ActionEvent event) {
-
-    }
-
 }
