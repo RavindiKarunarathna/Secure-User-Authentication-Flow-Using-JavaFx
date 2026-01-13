@@ -5,22 +5,63 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.text.Font?>
 
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.signUpController.SignUpFormController">
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.signUpController.SignUpFormController">
-   <children>
-      <Label alignment="CENTER" layoutX="138.0" layoutY="35.0" prefHeight="41.0" prefWidth="327.0" text="Sign Up Form">
-         <font>
-            <Font name="System Bold" size="23.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtFirstName" layoutX="63.0" layoutY="115.0" prefHeight="25.0" prefWidth="199.0" promptText="First Name" />
-      <TextField fx:id="txtLastName" layoutX="300.0" layoutY="115.0" prefHeight="25.0" prefWidth="199.0" promptText="Last Name" />
-      <TextField fx:id="txtEmail" layoutX="63.0" layoutY="174.0" prefHeight="25.0" prefWidth="439.0" promptText="Email" />
-      <PasswordField fx:id="txtPassword" layoutX="64.0" layoutY="230.0" prefHeight="25.0" prefWidth="439.0" promptText="Password" />
-      <PasswordField fx:id="txtReEnterPassword" layoutX="63.0" layoutY="281.0" prefHeight="25.0" prefWidth="439.0" promptText="Re-enter Password" />
-      <Button layoutX="120.0" layoutY="336.0" mnemonicParsing="false" onAction="#btnOnActionRegister" prefHeight="25.0" prefWidth="141.0" text="Register" />
-      <Button layoutX="310.0" layoutY="336.0" mnemonicParsing="false" onAction="#btnOnActionBacktoLogin" prefHeight="25.0" prefWidth="141.0" text="Back to Login" />
-   </children>
+    <children>
+        <Label layoutX="0.0" layoutY="0.0" prefHeight="500.0" prefWidth="600.0"
+               style="-fx-background-color: linear-gradient(to bottom right, #4e54c8, #8f94fb);" />
+
+        <VBox layoutX="100.0" layoutY="50.0" spacing="15.0" alignment="CENTER" prefWidth="400.0"
+              style="-fx-background-color: rgba(255,255,255,0.15); -fx-background-radius: 20; -fx-padding: 25;">
+
+            <effect>
+                <DropShadow color="#000000" radius="15.0" offsetX="0.0" offsetY="5.0" />
+            </effect>
+
+            <Label text="Create Account" textFill="WHITE" alignment="CENTER">
+                <font>
+                    <Font name="Arial Bold" size="30.0"/>
+                </font>
+                <effect>
+                    <DropShadow color="#000000" radius="5.0"/>
+                </effect>
+            </Label>
+
+            <HBox spacing="20.0">
+                <TextField fx:id="txtFirstName" prefHeight="35.0" prefWidth="180.0" promptText="First Name"
+                           style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-padding: 0 10 0 10; -fx-border-color: #ffffff; -fx-border-width: 1px;" />
+                <TextField fx:id="txtLastName" prefHeight="35.0" prefWidth="180.0" promptText="Last Name"
+                           style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-padding: 0 10 0 10; -fx-border-color: #ffffff; -fx-border-width: 1px;" />
+            </HBox>
+
+            <TextField fx:id="txtEmail" prefHeight="35.0" prefWidth="400.0" promptText="Email"
+                       style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-padding: 0 10 0 10; -fx-border-color: #ffffff; -fx-border-width: 1px;" />
+
+            <PasswordField fx:id="txtPassword" prefHeight="35.0" prefWidth="400.0" promptText="Password"
+                           style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-padding: 0 10 0 10; -fx-border-color: #ffffff; -fx-border-width: 1px;" />
+            <PasswordField fx:id="txtReEnterPassword" prefHeight="35.0" prefWidth="400.0" promptText="Re-enter Password"
+                           style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-padding: 0 10 0 10; -fx-border-color: #ffffff; -fx-border-width: 1px;" />
+            
+            <HBox spacing="40.0" alignment="CENTER">
+                <Button text="Register" onAction="#btnOnActionRegister" prefWidth="160.0" prefHeight="40.0"
+                        style="-fx-background-color: #6a11cb; -fx-text-fill: white; -fx-background-radius: 20; -fx-font-weight: bold;">
+                    <effect>
+                        <InnerShadow radius="5" color="#000000"/>
+                    </effect>
+                </Button>
+                <Button text="Back to Login" onAction="#btnOnActionBacktoLogin" prefWidth="160.0" prefHeight="40.0"
+                        style="-fx-background-color: #2575fc; -fx-text-fill: white; -fx-background-radius: 20; -fx-font-weight: bold;">
+                    <effect>
+                        <InnerShadow radius="5" color="#000000"/>
+                    </effect>
+                </Button>
+            </HBox>
+        </VBox>
+    </children>
 </AnchorPane>

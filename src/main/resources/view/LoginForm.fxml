@@ -28,7 +28,7 @@
                     <DropShadow color="#000000" radius="5.0" />
                 </effect>
             </Label>
-            
+
             <TextField fx:id="txtEmail" prefHeight="35.0" prefWidth="300.0" promptText="Email"
                        style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-padding: 0 10 0 10; -fx-border-color: #ffffff; -fx-border-width: 1px;" />
 
